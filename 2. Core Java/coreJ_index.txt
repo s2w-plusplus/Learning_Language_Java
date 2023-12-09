@@ -1,0 +1,161 @@
+---------------------------------------------------------------------------------------
+Day 1:
+
+	day01.1 --> datatypes,String.valueOf(XX),XX.parseXX(str)....
+	day1ass --> basic scanner and foodcart program
+---------------------------------------------------------------------------------------
+Day 2:
+	day2ass --> GC,stackarea,heaparea,metaspace using memory diagrams
+
+---------------------------------------------------------------------------------------
+Day 3:
+	day03.1 --> parameterised constructor overloading
+				Display name of the loaded class for primitive and ref array
+	day03.2 --> use of 'import static'
+	day03.3 --> Access modifiers (very imp)
+	day3ass --> Q1.1 --> use of ForEach
+				Q1.5 --> set classpath without IDE
+				Q2.1 --> array of objects of type <class>
+				Q2.2 --> Menu driven application using array of references
+---------------------------------------------------------------------------------------
+Day 4:
+	day04.1 --> Inheritence and runtime polymorphism,use of super() in constr, 
+				static initialiser block
+	day4ass --> Menu driven application using array of references
+
+---------------------------------------------------------------------------------------
+Day 5:
+	day05.1 --> method overloading with autocasting and ambiguity
+				attempt to override the inherited method will be considered as overloading if method signature is changed 
+	day05.2 --> dynamic method dispatch,implicit and explicit type casting
+	day05.3 -->	abstract method,tight encapsulation,toString().... 
+	day05.3 --> covariance(very imp)
+	day5ass --> Menu driven application using array of references
+				use of various oop principles
+---------------------------------------------------------------------------------------
+Day 6:
+	day06.1 --> tester for day05.3
+	day06.2 -->	concept of interface(direct/indirect referencing),DMD
+				multiple inheritence in java
+	day06.3 -->	Exception (start)
+	day6ass --> Stack using Dynamic Array
+---------------------------------------------------------------------------------------
+Day 7:
+	day07.1 --> custom exception,validation utils,try-catch-finally,try with resources,
+				throw vs throws,checked/unchecked,multiple catch blocks
+	day07.2 --> String!...method,literal pool,equality(ref vs content)
+	day6ass --> equals() method application
+---------------------------------------------------------------------------------------
+Day 8:
+	day08.1 --> Sringbuilder,java.util.Date,need of instanceOf,
+				variable arg(ellipses...), wrapper classes auto-boxing/unboxing
+	day08.2 --> Date validation (String to enum/date)
+	day08.3 --> String java.lang.String.intern()
+	day08.4 -->	enums using foodbill scenario (interesting)
+	day8ass -->	Menu driven application using array of references
+				practised validation (ValdationRules.java),Static Initialiser Block
+---------------------------------------------------------------------------------------
+Day 9:
+	day09.1 -->	non static nested inner class (HAS-A association of type composition)
+	day09.2 -->	non static nested inner class (stronger form of asso. : composition)
+				Class to hold ANY data type (primitive/ref type) without using generics
+	day09.3 -->	Nested Classes(VVIP),method local inner class and much more...
+	day9ass -->	No New Assignments
+
+---------------------------------------------------------------------------------------
+Day 10:
+	day10.1  --> Start of collection framework and generics
+	day10.1  --> Menu driven application using ArrayList
+	day10ass --> Menu driven application using ArrayList
+---------------------------------------------------------------------------------------
+Day 11:
+	day11.1  --> Comparable>>compareTo()>>natural ordering(BankAccount implements this intf)  
+												(vs)
+				 Comparator>>compare()>>custom ordering(used by separate implementing class) 
+				 Validation and business logic
+ 	day11ass --> Menu driven application using ArrayList, intro to listIterator,
+				 custom ordering(used by anonymous innerclass)
+--------------------------------------------------------------------------------------
+Day 12:
+	day12.1  --> Iterators (IllegalStateExc,NoSuchElemExc,ConcModExc)
+				 ListIterators (scrollable)
+	day12.2  --> Arrays.asList() CREATES FIXED SIZE LIST!!! adding to it causes UnsupportedOpExc
+	
+	day12.3  	 
+		&	 --> Intro to HashSet Contract>>(HashCode of similar object should be same : mandatory) 							
+	day12.4 								(HashCode of different object should be different : optional but recommended)
+	 
+	day12lab --> GENERICS wildcards,PECS principle
+				 Collection of subClass != Collection of superClass	(understand)
+	day12ass --> Generics n Collections, PECS (good examples)
+ 
+---------------------------------------------------------------------------------------
+Day 13:
+	day13.1  --> application of hashset with simple hashcode  
+	day13.2  --> application of hashset with improved hashcode  
+	day13.3  --> deeper insight in the working of hashMap (first check hashcode then equals() if collision occurs)
+	day13ass --> Menu based application using HashMap (CRUD)
+---------------------------------------------------------------------------------------
+Day 14:
+	day14.1  --> extended day13.3 >> KeyBased Sorting using TreeMap with natural order(key's own) or custom order(externally passed comparator)
+								  >> ValueBased Sorting by converting to CollectionView first and using Collections.sort			
+	day14.2  --> default methods in interface (since java 8), 
+				 Soln to diamond problem with default methods with same name (override is must)
+					there is a way to use default implementation by specific parent..,
+				 static methods in interface (since java 8)	cant be overridden but redeclared ,can be aaccessed through interface name only	
+				 Intro to imperative vs declarative style.Functional interface and lambda expression (Consumer,Predicate, Biconsumer)	 
+				  Single Abstract Method(SAM) >> comparator, comparable , runnable ,....
+	day14lab --> enhanced day14.1 using functional programming style (important)
+	day14lab2--> java8 streams,IntStream methods --range,filter,forEach,map,sum ;also see usage of collect in collection utils(toList,toMap)
+				 clarity on how streams work differently (parallel and sequential exec)
+				 Intro to java.util.Optional<T> (need more study), 
+				 sorting in stream (stream.sort( Comparator.comparing(...) )),
+				 static <T,​U extends Comparable<? super U>> Comparator<T> comparing​(Function<? super T,​? extends U> keyExtractor)  ,
+				 public <X extends Throwable> T orElseThrow​(Supplier<? extends X> exceptionSupplier) throws X extends Throwable
+	day14ass --> Menu based application using HashMap (CRUD)
+				 Date api, Map.Entry<k,v>,composite primary key			  
+---------------------------------------------------------------------------------------
+Day 15:
+	day15.1  --> more on Stream<> and Optional<>
+	day15.2  --> java.io.BufferedReader ,java.io.FileReader,java.io.PrintWriter (need study)
+	day15.3  --> nothing new 
+	day15ass --> no new assignments
+---------------------------------------------------------------------------------------
+Day 16:
+	day16.1  --> Use of static <T,​U> Comparator<T> comparing​(Function<? super T,​? extends U> keyExtractor, Comparator<? super U> keyComparator)
+				 Use of static <T> Function<T,​T> identity() , more on PrintWriter,	
+	
+	day16.2      Serialisation & de-Serialisation demo 
+	   & 	 --> Use of ObjectOutputStream,FileOutputStream,ObjectInputStream,FileInputStream,
+	day16.3		 (Notice 16.2Dependencies.jar in day16.3) ... expand on referenced libraries
+	
+	day16.4  --> Intro to multithreading
+	day16lab1--> simple application showing serialization/deserialization to/from same file 
+	day16lab2--> Creation of threads (extend 'Thread Class' or implement 'Runnable interface')
+	day16ass --> mam solved it herself in day17.1
+
+---------------------------------------------------------------------------------------
+Day 17:
+	day17.1  --> day16 assignment (even/odd thread)
+	day17.2  --> clever use of Comparator.comparing​() in multithreading scenario
+	day17.3  --> use of synchronized methods (no interleaving of sync methods of same object)
+	day17.4  --> use of synchronized  blocks (acquiring intrinsic lock) ...[also see Reentrant Sync]
+	             thread unsafe collection, beware of java.util.ConcurrentModificationException
+	day17.5  --> need of inter thread comm (when no-itc was used successive back-to-back 
+				 reads or writes are possible individually,causing some writes to go unread) 
+
+---------------------------------------------------------------------------------------
+Day 18:
+	day18.1  --> use of itc (flag is used to ensure reads and writes are alternate)
+				 singleton design pattern (Eager init using static block & Lazy init using method)	
+	day18_reflection --> public final class Class<T> (different ways of accessing the loaded class info.)
+						 Package java.lang.reflect (Reflection API)
+---------------------------------------------------------------------------------------
+Additional Work : pending
+---------------------------------------------------------------------------------------
+practise questions : pending
+---------------------------------------------------------------------------------------
+
+
+
+

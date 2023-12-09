@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;p1&apos; to &apos;use_runconfig&apos;&#x0D;&#x0A;- Original project: &apos;day03.1&apos;&#x0D;&#x0A;- Original element: &apos;day03.1/src/p1&apos;&#x0D;&#x0A;- Renamed element: &apos;day03.1/src/use_runconfig&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;p1&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;p1" name="use_runconfig" qualified="false" references="true" stamp="1636734198595" textual="false" version="1.0"/>
+</session>

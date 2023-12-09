@@ -1,0 +1,20 @@
+package Q1;
+
+import java.util.HashSet;
+
+public class StudentValidation {
+
+	public static void displayCourseStudents(String course, HashSet<Student> students) throws IllegalArgumentException{
+		
+		Course enumConst = Course.valueOf(course);
+		
+		for(Student s : students){
+			if(s)
+		}
+		
+	}
+	
+	
+	
+	
+}

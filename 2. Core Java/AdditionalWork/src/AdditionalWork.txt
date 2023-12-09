@@ -1,0 +1,39 @@
+------------------------------------------------
+4.  Extra  assignments(application of threads with collection n I/O)
+
+4.1 Create core classes --
+Student : prn (string : unique id) , name , email , password, course (enum) ,GPA(double) , dob(LocalDate)
+Address --street,city,zipCode
+Create Aggregation between Student & Address
+(weaker association)
+
+4.2 reate StudentCollctionUtils class to create populated Map of students with their address
+(atleast 5 entries)
+
+
+4.3 Create a multi threaded application for saving student details in 2 separate  bin files(taken from the SAME Map) : (in student_gpa.ser : sorted by gpa & in student_dob.ser : sorted by dob) using 2 different threads , concurrently! , using serialization.
+
+4.4 Write a utility to confirm the correctness of the output
+
+5. 
+Create new project 
+5.1 Copy from  utils package : JointAccount class , which represents a joint account between 2 customers.
+Go through it's methods carefully.
+
+5.2. Create a package runnable_tasks to create 2 runnable tasks (implements scenario)
+1. UpdaterTask 
+Should  invoke BankAccount's update balance method : continuously (while loop with some sleep)
+Hard code amount to update as 500.
+
+2. CheckerTask
+Invoke SAME BankAccount's check balance : continuously (while loop with some sleep)
+In ideal condition balance must be same as original balance (i.e 5000). So if it's not , then terminate application.
+(System.exit(1))
+
+5.3  Create a Tester 
+main : Create a SINGLE joint acct instance with opening balance of 5000.
+Pass it to 2 threads .
+Ensure no orphans. 
+Observe n conclude.
+
+

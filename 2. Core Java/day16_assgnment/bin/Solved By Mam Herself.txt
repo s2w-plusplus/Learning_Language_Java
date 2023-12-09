@@ -1,0 +1,35 @@
+Day 16
+1. Revise class work
+
+2. Refer to Day13 , book library assignment.
+At the time of launching the app , load book details from a bin file using de-serialization 
+Before terminating save book details
+(Collection + I/O)
+//solved in the lab itself refer-->>> day16_lab
+2.1 Add i/f : IOUtils
+2 methods
+1. static void storeData(map, fileName) throws ....
+{
+ //Java App --->OOS(ser) --->FOS( Bin File)
+//method : writeObject(map)
+}
+
+2. de-serial
+static  Map<...> restoreData(fileName) 
+{
+   //Java App <---- OIS <----FIS(bin file)  --in case of FNFExc(IOException) ----create new EMPTY map n ret
+   readObject : downcasting (Object ----> Map)
+}
+
+
+3. Create multi threaded java application --- having 3 threads
+main , even , odd.
+
+Create EvenPrinterTask  & OddPrinterTask
+Accept from user (in main thread)-- start & end values.
+Pass these values from main to child threads
+Even no printer thread  should print even nos within range, with small delay (sleep)
+Odd no printer thread should print odd nos within range , with small delay (sleep)
+Ensure no orphans.
+
+Solve above using  implements Runnable scenario.

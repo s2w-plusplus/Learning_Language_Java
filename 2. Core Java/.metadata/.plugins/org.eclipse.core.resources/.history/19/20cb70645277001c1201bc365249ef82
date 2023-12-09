@@ -1,0 +1,15 @@
+package Q3;
+
+import java.time.LocalDate;
+
+public enum Course {
+
+	;
+	private LocalDate regDate;
+	
+	private Course(LocalDate regDate) {
+		this.regDate = regDate;
+	}
+	
+	
+}

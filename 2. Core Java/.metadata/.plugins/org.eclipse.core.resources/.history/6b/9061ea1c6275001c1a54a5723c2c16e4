@@ -1,0 +1,117 @@
+package Q2;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+
+import static Q2.Employee.sdf;
+
+
+/*
+ 2.Create  java  application called EmpService(using suitable data structure) . 
+   This application must provide following functionalities.
+
+-> Add Employee: id(unique), name, dob, hireDate, salary and department
+	Add suitable validations
+	Dup emp info should not be added
+
+-> View Employee: 
+	i/p -- id 
+	O/P -- emp details or error message via catch block
+
+-> View Employees: Display all the employees in ascending order with respect to date of joining. 
+
+-> Delete Employee: 
+	i/p -- id
+	O/P -- emp details deleted message  or error message via catch block.
+
+Non-Functional Requirements:
+1. The application must use appropriate collection to save all the required information.
+2. Application must throw appropriate exceptions whenever necessary.
+3. Application must be created using appropriate layers. 
+ */
+public class TestEmpServices {
+
+	public static void main(String[] args) {
+		
+	try(Scanner scan = new Scanner(System.in)){
+			
+			HashMap<String,Employee> employees = CollectionUtils.populateMap();
+			boolean exit=false;
+			System.out.println("***************Employee Management System*************");
+			
+			do{
+			
+				System.out.println("1. Add Employee Details");
+				System.out.println("2. View Employee Details");
+				System.out.println("3. Display Details of all Employees (sort as per date of joining)");
+				System.out.println("4. Delete Employee Details");
+				System.out.println("5. Exit");
+
+				try{
+					
+					switch(scan.nextInt()) {
+						case 1:
+									System.out.println("Please Enter <Id> <Name> <DOB> <HireDate> <Salary> & <Department> in that order separated by newline");
+									String Id=scan.next();
+									if(!employees.containsKey(Id)){
+										Employee emp = ValidationUtils.validateEmp(Id,scan.next(),scan.next(),scan.next(),scan.nextDouble(),scan.next());
+										if(emp==null) {
+											System.out.println("Validation Failed");
+											break;
+										}
+										emp = employees.put(Id,emp);
+										System.out.println("Employee Details Added Successfully");
+									}
+									else
+										System.out.println("Record already exist for this Id");
+									break;
+						case 2:
+									System.out.println("Enter Id of the Employee");
+									Employee emp =employees.get(scan.next());
+									if(emp != null)
+										System.out.println(emp);
+									else
+										System.out.println("Id not found!!!");
+									break;
+						case 3:
+									System.out.println("---------------------All Employee Details--------------------- ");
+									List<Employee> employeeList=new ArrayList<Employee>(employees.values());
+									Collections.sort(employeeList, (e1,e2) -> e1.getHireDate().compareTo(e2.getHireDate()));
+								/*	Collections.sort(employeeList, new Comparator<Employee>(){
+										@Override
+										public int compare(Employee e1,Employee e2) {
+											return e1.getHireDate().compareTo(e2.getHireDate());
+										}
+									});
+								*/	for(Employee e :employeeList)
+										System.out.println(e);
+									System.out.println("---------------------------------------------------------------- ");
+									break;
+						case 4:
+									System.out.println("Enter Id of the Employee to be removed");
+									if(employees.remove(scan.next()) != null)
+										System.out.println("Employee Details Removed Successfully");
+									else	
+										System.out.println("No Records Found Against Given Id!");
+									break;
+						case 5:
+								exit=true;
+								break;
+					default:
+								System.out.println("Invalid Choice! Please Try Again...");
+					}
+					
+				}catch(CustomXception cx) {
+					System.out.println(cx.getMessage());
+				}catch(Exception x) {
+					x.printStackTrace();
+				}
+				scan.nextLine();
+			}while(!exit);
+		}
+	}
+}

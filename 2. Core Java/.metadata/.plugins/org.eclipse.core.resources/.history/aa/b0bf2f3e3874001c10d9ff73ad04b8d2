@@ -1,0 +1,9 @@
+package Q1;
+
+public class CustomXception extends Exception{
+	
+	CustomXception(String message){
+		super(message); 
+	}
+
+}

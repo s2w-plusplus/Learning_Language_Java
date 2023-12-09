@@ -1,0 +1,46 @@
+package Q2;
+
+import static Q2.Employee.sdf;
+
+import java.text.ParseException;
+import java.time.Period;
+import java.time.ZoneId;
+import java.util.Date;
+
+public class ValidationUtils {
+	
+	public static Employee validateEmp(String id,String name,String dob,String hiredate,double salary,String department) throws CustomXception {
+		
+		try {
+				Date birthDate = sdf.parse(dob);
+				Date joiningDate = sdf.parse(hiredate);
+				
+				if(birthDate.after(joiningDate)){
+					// old date api is a bitch!
+					int age=Period.between(birthDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
+													     joiningDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()).getYears();
+					
+					if(age < 18)
+						throw new CustomXception("You cant hire someone from below 18 years of age!!!");			
+				}
+				else throw new CustomXception("You cant hire somebody before they are born!!!");
+		
+				Department.valueOf(department); 
+					
+				
+					
+				
+		}catch(ParseException px){
+			throw new CustomXception("Invalid Date Format! please try again...");
+		}
+		
+		return new Employee(id,name, birthDate,joiningDate,salary,department);
+	}
+	 
+	
+	
+	
+	
+	
+	
+}

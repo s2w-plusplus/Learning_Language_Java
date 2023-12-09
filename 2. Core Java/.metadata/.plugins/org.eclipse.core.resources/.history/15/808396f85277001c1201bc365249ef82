@@ -1,0 +1,15 @@
+package Q3;
+
+import java.time.LocalDate;
+import static java.time.LocalDate.of;
+public enum Course {
+
+	EDAC(of(2021,12,29)),EDBDA(of(2021,12,29)),EDAI(of(2021,12,29)),EDESD(of(2021,12,29)),EDMC(of(2021,12,29)),EDITISS(of(2021,12,29));
+	private LocalDate regDate;
+	
+	private Course(LocalDate regDate) {
+		this.regDate = regDate;
+	}
+	
+	
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;CoreJavaLabExam&apos; to &apos;J2SELabExam&apos;" description="Rename resource &apos;CoreJavaLabExam&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CoreJavaLabExam" name="J2SELabExam" stamp="1630806446258" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;J2SELabExam&apos; to &apos;00. J2SELabExam&apos;" description="Rename resource &apos;J2SELabExam&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/J2SELabExam" name="00. J2SELabExam" stamp="1630806468740" updateReferences="true"/>
+</session>

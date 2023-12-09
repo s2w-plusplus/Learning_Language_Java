@@ -1,0 +1,24 @@
+package Q2;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class collectionUtils {
+	
+	static HashMap<String,Employee> populateMap(){
+
+		HashMap<String,Employee> employees = new HashMap<>();
+		employees.put("A1",new Employee("A1",));
+		employees.put("A2",new Employee("A2",));
+		employees.put("A3",new Employee("A3",));
+		employees.put("A4",new Employee("A4",));
+		employees.put("A5",new Employee("A5",));
+		employees.put("A6",new Employee("A6",));
+		
+		return  employees ;
+		
+	}
+	
+	
+       
+}

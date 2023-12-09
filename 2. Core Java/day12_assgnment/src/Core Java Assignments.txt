@@ -1,0 +1,57 @@
+Day 12
+
+1. Complete pending work.
+2. Import all day12 related projects & revise generic methods n generic syntax
+3. Solve
+
+3.1.1 Collections.shuffle() to shuffle list elements of type String
+		1. Create List of fixed size Strings(Arrays.asList)
+		2. Then use shuffle method to shuffle this list n print same.
+3.1.2 Collections.shuffle() to shuffle list elements of type double
+		1. Create List of fixed size Doubles(Arrays.asList)
+		2. Then use shuffle method to shuffle this list n print same.
+3.1.3 Write a static , generic method to display details (toString) of collection(AL,LL,V,HS,LHS,TS) of any type.
+		Usage : AL<Integer> l1, HS<String> l2 , LL<Date> l3
+		display(l1/l2/l3);
+3.1.4 Write a generic method to accept ANY type of the collection(any list or any set) of numbers (int/double/float/byte/short...) n return it's sum
+eg : public static double ......(...)
+{
+//Wrapper : double doubleValue()
+}
+3.1.5
+Use Collections.fill  method , to fill up List of emps with Emp/Mgr/SalesMgr/Worker ....(Emp or any any sub type of emp
+
+
+3.2 Collections.copy to understand extends vs super
+3.3 Write a generic method to accept ANY type of the collection(any list or any set) of numbers (ints/double/float) n return it's sum
+3.4 Write a generic method to accept ANY type of the list of numbers  &   add the specified number to the list. 
+(For understanding PECS)
+3.5 Solve uploaded "generic-questions"
+
+
+4. Add the populated list of students to HashSet.
+Add students with dup PRN (don't call dup based validation rule)
+Check if it's storing the dups.
+If  yes : fix the problem
+
+
+5. More practise questions for generics
+Emp <---Mgr <----SalesManager
+public class Test1 {
+public static void main(String[] args) {
+ArrayList<Emp> list = new ArrayList<>(Arrays.asList(new Emp(), new Mgr(), new SalesMgr()));
+list.add(new SalesMgr());
+displayDetails(list);
+ArrayList<Mgr> list2 = new ArrayList<>(Arrays.asList(new Mgr(), new SalesMgr(),new Mgr()));
+displayDetails(list2);
+}
+
+// add a static method to display Emp/Mgr/Worker details from any collection
+public static void displayDetails(Collection<Emp> emps) {
+ for (Emp e : emps)
+ System.out.println(e);
+}
+
+}
+What will happen ?
+

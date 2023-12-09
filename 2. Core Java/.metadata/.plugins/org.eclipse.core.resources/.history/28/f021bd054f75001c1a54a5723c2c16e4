@@ -1,0 +1,35 @@
+package Q2;
+
+import static Q2.Employee.sdf;
+
+import java.text.ParseException;
+
+public class ValidationUtils {
+	
+	public static Employee validateEmp(String Id,String name,String dob,String hiredate,
+			double salary,String department) throws CustomXception {
+		
+		try {
+			if(sdf.parse(dob).before(sdf.parse(hiredate))){
+			
+			}
+			else
+				throw new CustomXception("You cant hire somebody before they are born!!!");
+		
+		}catch(ParseException px){
+			throw new CustomXception("Invalid Date Format! please try again...");
+		}
+		
+		
+		
+		
+		return null;
+	}
+	 
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,6 @@
+package Q2;
+
+
+public enum Department {
+HR,Deployment,Engineering,Accounts,Management,CustomerService;
+}

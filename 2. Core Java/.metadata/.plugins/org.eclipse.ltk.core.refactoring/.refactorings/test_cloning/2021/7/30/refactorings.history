@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;xtraTopics/src/cloning&apos;&#x0D;&#x0A;- Original project: &apos;test_cloning&apos;&#x0D;&#x0A;- Destination element: &apos;xtraTopics/src/cloning&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     test_cloning/src/cloning_shallow_copy&#x0D;&#x0A;     test_cloning/src/cloning_deep_copy" description="Copy packages" destination="=xtraTopics/src&lt;cloning" element1="/src&lt;cloning_shallow_copy" element2="/src&lt;cloning_deep_copy" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1626588302859" version="1.0"/>
+</session>

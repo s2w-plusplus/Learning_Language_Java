@@ -1,0 +1,24 @@
+package Q2;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class collectionUtils {
+	
+	static HashMap<Integer,Employee> populateMap(){
+
+		HashSet<Employee> students = new HashSet<>();
+		students.add(,new Employee("A1","A1@gmail.com",9876543210L,Course.EDAC,98.76));
+		students.add(,new Employee("A2","A2@gmail.com",9876543211L,Course.EDAI,76.12));
+		students.add(,new Employee("A3","A3@gmail.com",9876543212L,Course.EDBDA,84.36));
+		students.add(,new Employee("A4","A4@gmail.com",9876543213L,Course.EDESD,54.60));
+		students.add(,new Employee("A5","A5@gmail.com",9876543214L,Course.EDITISS,61.91));
+		students.add(,new Employee("A6","A6@gmail.com",9876543215L,Course.EDMC,41.11));
+		
+		return students;
+		
+	}
+	
+	
+       
+}

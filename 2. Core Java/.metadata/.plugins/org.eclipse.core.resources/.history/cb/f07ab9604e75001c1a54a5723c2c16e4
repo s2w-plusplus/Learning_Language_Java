@@ -1,0 +1,26 @@
+package Q2;
+
+import static Q2.Employee.sdf;
+
+public class ValidationUtils {
+	
+	public static Employee validateEmp(String Id,String name,String dob,String hiredate,
+			double salary,String department) throws CustomXception {
+		
+		if(sdf.parse(dob).before(sdf.parse(hiredate)){
+			
+		}
+		else
+			throw new CustomXception("You cant hire somebody before they are born!!!")
+		
+		return null;
+		
+	}
+	 
+	
+	
+	
+	
+	
+	
+}
